@@ -17,16 +17,14 @@ class Financialanalyst:
 
     llm = LLM(
         # model="groq/llama-3.3-70b-versatile",
-        model="groq/gemma2-9b-it",
-        # model="groq/meta-llama/llama-4-scout-17b-16e-instruct",
+        model="gemini/gemini-2.0-flash",
         temperature=0.5,
         # seed=42,
         max_tokens=1000,
     )
     
     manager_llm = LLM(
-        model="groq/llama-3.3-70b-versatile",
-        # model="groq/meta-llama/llama-4-scout-17b-16e-instruct",
+        model="gemini/gemini-2.0-flash",
         temperature=0.5,
         # seed=42,
         max_tokens=512,
@@ -50,7 +48,7 @@ class Financialanalyst:
                 self.scrape_tool,
                 self.search_tool,
             ],
-            function_calling_llm=self.function_calling_llm,
+            # function_calling_llm=self.function_calling_llm,
             # max_rpm=2,
         )
 
@@ -65,7 +63,7 @@ class Financialanalyst:
                 self.search_tool,
                 self.scrape_tool,
             ],
-            function_calling_llm=self.function_calling_llm,
+            # function_calling_llm=self.function_calling_llm,
             # max_rpm=2,
         )
 
@@ -80,7 +78,7 @@ class Financialanalyst:
                 self.search_tool,
                 self.scrape_tool,
             ],
-            function_calling_llm=self.function_calling_llm,
+            # function_calling_llm=self.function_calling_llm,
         )
 
     @agent
@@ -94,7 +92,7 @@ class Financialanalyst:
                 self.search_tool,
                 self.scrape_tool,
             ],
-            function_calling_llm=self.function_calling_llm,
+            # function_calling_llm=self.function_calling_llm,
         )
 
     @task
